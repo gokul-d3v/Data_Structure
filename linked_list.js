@@ -81,7 +81,25 @@ class LinkedList {
     }
     prev.next = curr.next;
   }
-  //   largest and second largest in LinkedList
+  //   second largest in LinkedList
+  secondLargest() {
+    if (!this.head) {
+      return;
+    }
+    let l = this.head.data;
+    let s = this.head.data;
+    let curr = this.head;
+    while (curr != null) {
+      if (l < curr.data) {
+        s = l;
+        l = curr.data;
+      } else if ((s < curr.data && s != l) || s == l) {
+        s = curr.data;
+      }
+      curr = curr.next;
+    }
+    console.log(`second largest is ${s}`);
+  }
 }
 
 const l = new LinkedList();
@@ -91,5 +109,6 @@ l.append(20);
 l.append(30);
 l.prepend(8);
 l.insert(10, 25);
-l.delete(25);
+l.delete(20);
 l.display();
+l.secondLargest();
