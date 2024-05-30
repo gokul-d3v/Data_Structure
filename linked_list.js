@@ -103,17 +103,3 @@ class LinkedList {
 }
 
 const l = new LinkedList();
-l.append(10);
-l.prepend(9);
-l.append(20);
-l.append(30);
-l.prepend(8);
-l.insert(10, 25);
-l.delete(20);
-l.display();
-l.secondLargest();
-
-console.log("a" + 1);
-console.log("a" + 1 + 2);
-console.log("a" + 1 + "2");
-console.log("1" - 1);
